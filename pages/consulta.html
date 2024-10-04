@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibir Dados</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!-- Inclui a biblioteca jQuery -->
+    <script>
+        // Função para buscar os dados e atualizar a tabela
+        function atualizarTabela() {
+            $.ajax({
+                url: '../api/buscar_dados.php', // Faz a requisição para o arquivo PHP que retorna os dados
+                method: 'GET',
+                dataType: 'json',
+                success: function(data) {
+                    // Limpa a tabela
+                    $('#tabela-dados tbody').empty();
+
+                    // Insere os novos dados na tabela
+                    data.forEach(function(item) {
+                        $('#tabela-dados tbody').append(
+                            '<tr>' +
+                                '<td>' + item.id + '</td>' +
+                                '<td>' + item.nome + '</td>' +
+                                '<td>' + item.email + '</td>' +
+                            '</tr>'
+                        );
+                    });
+                }
+            });
+        }
+
+        // Atualiza a tabela a cada 5 segundos
+        setInterval(atualizarTabela, 5000);
+
+        // Atualiza a tabela assim que a página carrega
+        $(document).ready(function() {
+            atualizarTabela();
+        });
+    </script>
+</head>
+<body>
+    <h1>Lista de Dados Inseridos</h1>
+
+    <table id="tabela-dados" border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Os dados serão inseridos aqui via AJAX -->
+        </tbody>
+    </table>
+</body>
+</html>
