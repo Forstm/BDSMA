@@ -5,5 +5,60 @@
 }
 
 body{
-    
+    background-color: #000000;
+}
+
+section{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .box-form{
+    width: 31.25rem;
+    height: 25rem;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+.box-form h1{
+    margin: 50px 0 40px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.box-form p{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.campos-form{
+    /* background-color: yellow; */
+    width: 250px;
+    margin: 0 auto;
+}
+
+.campos-form span{
+    display: block;
+    margin-bottom: 3px;
+}
+
+.campos-form input{
+    display: block;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 16px;
+}
+
+.input-user-senha{
+    width: 100%;
+    padding: 4px;
+}
+
+.campos-form .btn-entrar{
+    margin: 30px auto 0;
+    padding: 4px 16px;
+    cursor: pointer;
 }

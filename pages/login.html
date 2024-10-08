@@ -9,14 +9,21 @@
 </head>
 <body>
 
-    <form action="../api/login.php" method="POST"></form>
-        <h2>Login</h2>
-        <span>Nome de usuário</span>
-        <input type="text" name="username" required>
-        <span>Senha:</span>
-        <input type="password" name="password" required>
-        <input type="submit" value="Entrar">
-    </form>    
+    <section>
+        <div class="box-form">
+            <form action="../api/login.php" method="POST">
+                <h1>Faça o seu login</h1>
+                <p>Caso não saiba o login e/ou senha, entre em contato com o time de TI</p>
+                <div class="campos-form">
+                    <span>Usuário</span>
+                    <input type="text" name="username" required placeholder="Ex.: FAB001" class="input-user-senha">
+                    <span>Senha</span>
+                    <input type="password" name="password" required placeholder="Digite a sua senha" class="input-user-senha">
+                    <input type="submit" value="Entrar" class="btn-entrar">
+                </div>
+            </form> 
+        </div>
+    </section>   
     
 </body>
 </html>
