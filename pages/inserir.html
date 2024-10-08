@@ -7,10 +7,16 @@
 </head>
 <body>
     <div>
-        <h2>Inserir Dados no Banco de Dados</h2>
+        <h2>Escolha a Opção de Proteína</h2>
         <form action="../api/inserir.php" method="POST">
             Nome: <input type="text" name="nome" required><br><br>
-            Email: <input type="email" name="email" required><br><br>
+            Escolha a Proteína:
+            <select name="proteina" required>
+                <option value="Ovo frito">Ovo frito</option>
+                <option value="Ovo cozido">Ovo cozido</option>
+                <option value="Omelete">Omelete</option>
+                <option value="Frango grelhado">Frango grelhado</option>
+            </select><br><br>
             <input type="submit" value="Inserir">
         </form>
         <a href="logout.php">Sair</a>

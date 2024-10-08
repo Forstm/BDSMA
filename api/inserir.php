@@ -12,14 +12,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     include 'conexao.php';
 
     $nome = $_POST['nome'];
-    $email = $_POST['email'];
+    $proteina = $_POST['proteina'];
 
     // Prepara o SQL para inserir os dados
-    $sql = "INSERT INTO dados (nome, email) VALUES ('$nome', '$email')";
+    $sql = "INSERT INTO pedidos (nome, proteina) VALUES ('$nome', '$proteina')";
 
     // Executa a query e verifica se deu certo
     if ($conn->query($sql) === TRUE) {
-        echo "Dados inseridos com sucesso!";
+        echo "Pedido inserido com sucesso!";
     } else {
         echo "Erro: " . $sql . "<br>" . $conn->error;
     }
