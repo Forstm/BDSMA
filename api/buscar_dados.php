@@ -7,8 +7,8 @@ if ($conn->connect_error) {
     die("Erro de conexão: " . $conn->connect_error);
 }
 
-// Consulta SQL para buscar todos os dados da tabela 'dados'
-$sql = "SELECT id, nome, email FROM dados";
+// Consulta SQL para buscar todos os dados da tabela 'pedidos'
+$sql = "SELECT nome, proteina, data_pedido FROM pedidos ORDER BY data_pedido DESC"; // Altere para a tabela correta
 $result = $conn->query($sql);
 
 if (!$result) {
@@ -30,3 +30,4 @@ echo json_encode($dados);
 // Fecha a conexão com o banco de dados
 $conn->close();
 ?>
+

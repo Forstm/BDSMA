@@ -4,26 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exibir Dados</title>
+    <title>Consulta de Pedidos</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!-- Inclui a biblioteca jQuery -->
     <script>
         // Função para buscar os dados e atualizar a tabela
         function atualizarTabela() {
             $.ajax({
-                url: '../api/buscar_dados.php', // Faz a requisição para o arquivo PHP que retorna os dados
+                url: '../api/buscar_dados.php', // Ajustado para o arquivo que retorna os dados dos pedidos
                 method: 'GET',
                 dataType: 'json',
                 success: function(data) {
                     // Limpa a tabela
-                    $('#tabela-dados tbody').empty();
+                    $('#tabela-pedidos tbody').empty();
 
                     // Insere os novos dados na tabela
                     data.forEach(function(item) {
-                        $('#tabela-dados tbody').append(
+                        $('#tabela-pedidos tbody').append(
                             '<tr>' +
-                                '<td>' + item.id + '</td>' +
                                 '<td>' + item.nome + '</td>' +
-                                '<td>' + item.email + '</td>' +
+                                '<td>' + item.proteina + '</td>' +
+                                '<td>' + item.data_pedido + '</td>' +
                             '</tr>'
                         );
                     });
@@ -39,20 +39,36 @@
             atualizarTabela();
         });
     </script>
+    <style>
+        table {
+            width: 50%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
-    <h1>Lista de Dados Inseridos</h1>
-
-    <table id="tabela-dados" border="1">
+    <h2 style="text-align: center;">Pedidos de Proteínas</h2>
+    <table id="tabela-pedidos">
         <thead>
             <tr>
-                <th>ID</th>
                 <th>Nome</th>
-                <th>Email</th>
+                <th>Proteína Escolhida</th>
+                <th>Data do Pedido</th>
             </tr>
         </thead>
         <tbody>
-            <!-- Os dados serão inseridos aqui via AJAX -->
+            <!-- Os dados serão carregados via AJAX -->
         </tbody>
     </table>
 </body>
