@@ -2,30 +2,21 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
-    <style> 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-image: linear-gradient(45deg, cyan, rgb(255, 85, 0));
-        }
-        form {
-            background-color: rgba(0, 0, 0, 0.8);
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            padding: 80px;
-            border-radius: 15px;
-            color: #fff;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intranet SMA Cabos e Sistemas</title>
+
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <form action="../api/login.php" method="POST">
+
+    <form action="../api/login.php" method="POST"></form>
         <h2>Login</h2>
-        Nome de Usuário: <input type="text" name="username" required><br><br>
-        Senha: <input type="password" name="password" required><br><br>
+        <span>Nome de usuário</span>
+        <input type="text" name="username" required>
+        <span>Senha:</span>
+        <input type="password" name="password" required>
         <input type="submit" value="Entrar">
-    </form>
+    </form>    
+    
 </body>
 </html>
