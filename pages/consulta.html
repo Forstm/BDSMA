@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consulta de Pedidos</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!-- Inclui a biblioteca jQuery -->
+
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script> <!-- Inclui a biblioteca jQuery -->
     <script>
         // Função para buscar os dados e atualizar a tabela
         function atualizarTabela() {
@@ -39,32 +41,15 @@
             atualizarTabela();
         });
     </script>
-    <style>
-        table {
-            width: 50%;
-            margin: 0 auto;
-            border-collapse: collapse;
-        }
-        table, th, td {
-            border: 1px solid black;
-        }
-        th, td {
-            padding: 10px;
-            text-align: center;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
 </head>
-<body>
-    <h2 style="text-align: center;">Pedidos de Proteínas</h2>
+<body class="fundo-branco">
+    <h2 class="titulo-page-consulta">Pedidos de Proteínas</h2>
     <table id="tabela-pedidos">
         <thead>
             <tr>
                 <th>Nome</th>
-                <th>Proteína Escolhida</th>
-                <th>Data do Pedido</th>
+                <th>Proteína escolhida</th>
+                <th>Data do pedido</th>
             </tr>
         </thead>
         <tbody>

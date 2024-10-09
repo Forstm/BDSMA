@@ -3,23 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inserir Dados</title>
+    <title>Intranet SMA CAbos e Sistemas</title>
+
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <div>
-        <h2>Escolha a Opção de Proteína</h2>
-        <form action="../api/inserir.php" method="POST">
-            Nome: <input type="text" name="nome" required><br><br>
-            Escolha a Proteína:
-            <select name="proteina" required>
-                <option value="Ovo frito">Ovo frito</option>
-                <option value="Ovo cozido">Ovo cozido</option>
-                <option value="Omelete">Omelete</option>
-                <option value="Frango grelhado">Frango grelhado</option>
-            </select><br><br>
-            <input type="submit" value="Inserir">
-        </form>
-        <a href="logout.php">Sair</a>
-    </div>
+    <section>
+        <div class="box-inserir">
+            <h1>Escolha a opção de proteína</h1>
+            <form action="../api/inserir.php" method="POST">
+                <div class="campos-form-inserir">
+                    <div class="linha-form">
+                        <span>Nome</span>
+                        <input type="text" name="nome" required placeholder="Digite o seu nome" class="input-inserir">
+                    </div>
+                    <div class="linha-form">
+                        <span>Setor</span>
+                        <input type="text" name="setor" required placeholder="Digite o seu setor" class="input-inserir">
+                    </div>
+                    <span>Selecione a Proteína</span>
+                    <select name="proteina" required>
+                        <option value="Ovo frito">Ovo frito</option>
+                        <option value="Ovo cozido">Ovo cozido</option>
+                        <option value="Omelete">Omelete</option>
+                        <option value="Frango grelhado">Frango grelhado</option>
+                    </select>
+                    <input type="submit" value="Inserir" class="btn-inserir">
+                </div>
+            </form>
+            <span class="sair">
+                Caso deseje sair, clique <a href="logout.php">aqui</a>
+            </span>
+        </div>
+    </section>
 </body>
 </html>

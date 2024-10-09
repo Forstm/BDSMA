@@ -13,12 +13,16 @@
         <div class="box-form">
             <form action="../api/login.php" method="POST">
                 <h1>Faça o seu login</h1>
-                <p>Caso não saiba o login e/ou senha, entre em contato com o time de TI</p>
+                <p>Caso não saiba o login e/ou a senha, entre em contato com o time de TI.</p>
                 <div class="campos-form">
-                    <span>Usuário</span>
-                    <input type="text" name="username" required placeholder="Ex.: FAB001" class="input-user-senha">
-                    <span>Senha</span>
-                    <input type="password" name="password" required placeholder="Digite a sua senha" class="input-user-senha">
+                    <div class="linha-form">
+                        <span>Usuário</span>
+                        <input type="text" name="username" required placeholder="Ex.: FAB001" class="input-user-senha">
+                    </div>
+                    <div class="linha-form">
+                        <span>Senha</span>
+                        <input type="password" name="password" required placeholder="Digite a sua senha" class="input-user-senha">
+                    </div>
                     <input type="submit" value="Entrar" class="btn-entrar">
                 </div>
             </form> 

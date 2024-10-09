@@ -5,7 +5,9 @@
 }
 
 body{
-    background-color: #000000;
+    background: url(../images/background-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 section{
@@ -16,49 +18,188 @@ section{
     justify-content: center;
 }
 
+.linha-form{
+    border-bottom: 1px solid white;
+}
+
+/*ESTILO PÁGINA LOGIN.HTML */
+
 section .box-form{
-    width: 31.25rem;
-    height: 25rem;
-    background-color: white;
+    width: 25rem;
+    height: 26.5rem;
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    backdrop-filter: blur(15px);
     border-radius: 1rem;
+    padding: 0px 50px;
 }
 
 .box-form h1{
     margin: 50px 0 40px;
     text-align: center;
     font-size: 30px;
+    color: white;
 }
 
 .box-form p{
     text-align: center;
     margin-bottom: 50px;
+    color: white;
 }
 
 .campos-form{
-    /* background-color: yellow; */
     width: 250px;
     margin: 0 auto;
+    color: white;
 }
 
 .campos-form span{
     display: block;
-    margin-bottom: 3px;
+    margin: 16px 0 3px;
 }
 
 .campos-form input{
     display: block;
-    border: 1px solid black;
-    border-radius: 5px;
-    margin-bottom: 16px;
+    background-color: transparent;
+    border: none;
+    outline: none; /*Deixa sem borda mesmo quando clicado o campo */
+    color: white;
 }
 
 .input-user-senha{
     width: 100%;
-    padding: 4px;
+    padding: 4px 0;
+}
+
+.input-user-senha::placeholder{
+    color: #e48b8b;
 }
 
 .campos-form .btn-entrar{
     margin: 30px auto 0;
     padding: 4px 16px;
     cursor: pointer;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
 }
+
+.campos-form .btn-entrar:hover{
+    background-color: #3b3b3b;
+}
+
+/* FIM ESTILO PÁGINA LOGIN.HTML */
+/*
+/*
+/*ESTILO PÁGINA INSERIR.HTML */
+
+.box-inserir{
+    width: 400px;
+    height: 430px;
+    background-color: white;
+    border-radius: 1rem;
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    backdrop-filter: blur(15px);
+}
+
+.box-inserir h1{
+    margin: 50px 0 30px;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+
+.campos-form-inserir{
+    width: 250px;
+    margin: 0 auto;
+}
+
+.campos-form-inserir span{
+    display: block;
+    color: white;
+    margin: 16px 0 3px;
+}
+
+.campos-form-inserir input{
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 4px 0;
+    background-color: transparent;
+    color: white;
+}
+
+.input-inserir::placeholder{
+    color: #e48b8b;
+}
+
+.campos-form-inserir select{
+    width: 100%;
+    margin: 3px 0 16px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 4px;
+    
+}
+
+.campos-form-inserir .btn-inserir{
+    width: 30%;
+    margin: 10px auto 0;
+    padding: 4px 16px;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.campos-form-inserir .btn-inserir:hover{
+    background-color: #3b3b3b;
+}
+
+.sair{
+    margin: 30px 0 0;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+.sair a{
+    color: rgb(255, 230, 0);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*FIM ESTILO PÁGINA INSERIR.HTML */
+/*
+/*
+/* ESTILO PÁGINA CONSULTA.HTML */
+
+.fundo-branco{
+    background-color: white;
+}
+
+.titulo-page-consulta{
+    text-align: center;
+    margin: 30px 0 16px;
+}
+
+table {
+    width: 50%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+th {
+    background-color: #f2f2f2;
+}
+
+/* ESTILO PÁGINA CONSULTA.HTML */
+/*
+/*
