@@ -182,22 +182,31 @@ section .box-form{
 .titulo-page-consulta{
     text-align: center;
     margin: 30px 0 16px;
+    color: white;
 }
 
 table {
     width: 50%;
     margin: 0 auto;
     border-collapse: collapse;
+    border-radius: 5px;
 }
+
 table, th, td {
     border: 1px solid black;
 }
+
 th, td {
     padding: 10px;
     text-align: center;
 }
-th {
+
+td{
     background-color: #f2f2f2;
+}
+
+th {
+    background-color: #a2a2a2;
 }
 
 /* ESTILO PÁGINA CONSULTA.HTML */
