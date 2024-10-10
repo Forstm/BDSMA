@@ -24,6 +24,7 @@
                         $('#tabela-pedidos tbody').append(
                             '<tr>' +
                                 '<td>' + item.nome + '</td>' +
+                                '<td>' + item.setor + '</td>' +
                                 '<td>' + item.proteina + '</td>' +
                                 '<td>' + item.data_pedido + '</td>' +
                             '</tr>'
@@ -31,6 +32,21 @@
                     });
                 }
             });
+        }
+
+        // Função para limpar os pedidos
+        function limparPedidos() {
+            if (confirm("Tem certeza que deseja limpar todos os pedidos?")) {
+                $.ajax({
+                    url: '../api/limpar_pedidos.php',
+                    method: 'POST',
+                    success: function(response) {
+                        // Limpa a tabela após a limpeza dos dados
+                        $('#tabela-pedidos tbody').empty();
+                        alert("Todos os pedidos foram removidos!");
+                    }
+                });
+            }
         }
 
         // Atualiza a tabela a cada 5 segundos
@@ -48,6 +64,7 @@
         <thead>
             <tr>
                 <th>Nome</th>
+                <th>Setor</th>
                 <th>Proteína escolhida</th>
                 <th>Data do pedido</th>
             </tr>
@@ -55,6 +72,9 @@
         <tbody>
             <!-- Os dados serão carregados via AJAX -->
         </tbody>
+        <div style="text-align: center; margin-top: 20px;">
+            <button onclick="limparPedidos()">Limpar Pedidos</button>
+        </div>
     </table>
 </body>
 </html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserir Cardápio</title>
+</head>
+<body>
+    <div>
+        <h2>Inserir Cardápio do Dia</h2>
+        <form action="../api/inserir_cardapio.php" method="POST">
+            Prato Principal: <input type="text" name="prato_principal" required><br><br>
+            Acompanhamento: <input type="text" name="acompanhamento" required><br><br>
+            Proteína: 
+            <select name="proteina" required>
+                <option value="Frango">Frango</option>
+                <option value="Peixe">Peixe</option>
+                <option value="Carne de Vaca">Carne de Vaca</option>
+                <option value="Carne de Porco">Carne de Porco</option>
+                <option value="Vegetariano">Vegetariano</option>
+            </select><br><br>
+            <input type="submit" value="Inserir Cardápio">
+        </form>
+        <a href="logout.php">Sair</a>
+    </div>
+</body>
+</html>

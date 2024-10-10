@@ -8,7 +8,7 @@ if ($conn->connect_error) {
 }
 
 // Consulta SQL para buscar todos os dados da tabela 'pedidos'
-$sql = "SELECT nome, proteina, data_pedido FROM pedidos ORDER BY data_pedido DESC"; // Altere para a tabela correta
+$sql = "SELECT nome, setor, proteina, data_pedido FROM pedidos ORDER BY data_pedido DESC"; // Altere para a tabela correta
 $result = $conn->query($sql);
 
 if (!$result) {

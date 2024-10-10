@@ -12,10 +12,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     include 'conexao.php';
 
     $nome = $_POST['nome'];
+    $setor = $_POST['setor'];
     $proteina = $_POST['proteina'];
 
     // Prepara o SQL para inserir os dados
-    $sql = "INSERT INTO pedidos (nome, proteina) VALUES ('$nome', '$proteina')";
+    $sql = "INSERT INTO pedidos (nome, setor, proteina) VALUES ('$nome', '$setor', '$proteina')";
 
     // Executa a query e verifica se deu certo
     if ($conn->query($sql) === TRUE) {
