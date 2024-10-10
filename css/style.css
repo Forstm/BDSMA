@@ -1,8 +1,27 @@
+/*
+
+* Padronizar estilos das tags input, h1, span
+
+* Padronizar a classe .box-form e setar manualmente o tamanho em cada página
+
+*
+
+*/
+
+@import url('fonts.css');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+:root{
+    --fonte-titulo: Poppins, 'sans-serif';
+    --fonte-texto: Playfair, 'sans-serif';
+}
+
+
 
 body{
     background: url(../images/background-img.png);
@@ -18,9 +37,37 @@ section{
     justify-content: center;
 }
 
+span{
+    font-family: var(--fonte-texto);
+    display: block;
+}
+
+p{
+    font-family: var(--fonte-texto);
+}
+
+h1{
+    font-family: var(--fonte-titulo);
+}
+
+input{
+    display: block;
+}
+
+input, span, h1, a{
+    color: white;
+}
+
+a{
+    color: rgb(255, 230, 0);
+    text-decoration: none;
+    font-weight: bold;
+}
+
 .linha-form{
     border-bottom: 1px solid white;
 }
+
 
 /*ESTILO PÁGINA LOGIN.HTML */
 
@@ -43,8 +90,9 @@ section .box-form{
 
 .box-form p{
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     color: white;
+    font-size: 17px;
 }
 
 .campos-form{
@@ -54,12 +102,11 @@ section .box-form{
 }
 
 .campos-form span{
-    display: block;
-    margin: 16px 0 3px;
+    margin: 19px 0 0;
+    font-size: 17px;
 }
 
 .campos-form input{
-    display: block;
     background-color: transparent;
     border: none;
     outline: none; /*Deixa sem borda mesmo quando clicado o campo */
@@ -115,13 +162,11 @@ section .box-form{
 }
 
 .campos-form-inserir span{
-    display: block;
     color: white;
     margin: 16px 0 3px;
 }
 
 .campos-form-inserir input{
-    display: block;
     width: 100%;
     border: none;
     outline: none;
@@ -156,18 +201,12 @@ section .box-form{
     background-color: #3b3b3b;
 }
 
-.sair{
+.texto-sair{
     margin: 30px 0 0;
     display: block;
     text-align: center;
     font-size: 18px;
     color: white;
-}
-
-.sair a{
-    color: rgb(255, 230, 0);
-    text-decoration: none;
-    font-weight: bold;
 }
 
 /*FIM ESTILO PÁGINA INSERIR.HTML */
@@ -209,6 +248,11 @@ th {
     background-color: #a2a2a2;
 }
 
-/* ESTILO PÁGINA CONSULTA.HTML */
+/* FIM ESTILO PÁGINA CONSULTA.HTML */
 /*
 /*
+/* ESTILO PÁGINA INSERIR_CARDAPIO.HTML */
+
+
+
+/* FIM ESTILO PÁGINA INSERIR_CARDAPIO.HTML */
