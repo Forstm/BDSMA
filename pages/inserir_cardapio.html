@@ -3,25 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inserir Cardápio</title>
+    <title>Intranet SMA CAbos e Sistemas</title>
 
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <section>
-        <div>
+        <div class="box-form">
             <h1>Cardápio da Segunda-Feira</h1>
             <form action="../api/inserir_cardapio.php" method="POST">
                 <span>Salada</span>
-                <input type="text" name="salada1" required>
+                <div class="linha-form-inserir-cardapio">
+                    <input type="text" name="salada1" placeholder="Opção 1" class="item-cardapio">
+                </div>
+                <div class="linha-form-inserir-cardapio">
+                    <input type="text" name="salada2" placeholder="Opção 2" class="item-cardapio">
+                </div>
+                <div class="linha-form-inserir-cardapio">
+                    <input type="text" name="salada3" placeholder="Opção 3" class="item-cardapio">
+                </div>
+                
                 <span>Acompanhamento</span>
-                <input type="text" name="acompanhamento" required>
+                <div class="linha-form-inserir-cardapio">
+                    <p class="acompanhamento-fixo">Arroz Branco</p>
+                    <!-- <input type="text" name="acompanhamento1" placeholder="Arroz Branco" class="item-cardapio"> -->
+                </div>
+                <div class="linha-form-inserir-cardapio">
+                    <p class="acompanhamento-fixo">Arroz Integral</p>
+                    <!-- <input type="text" name="acompanhamento2" placeholder="Arroz Integral" class="item-cardapio"> -->
+                </div>
+                <div class="linha-form-inserir-cardapio">
+                    <p class="acompanhamento-fixo">Feijão</p>
+                    <!-- <input type="text" name="acompanhamento3" placeholder="Feijão" class="item-cardapio"> -->
+                </div>
+                <div class="linha-form-inserir-cardapio">
+                    <input type="text" name="acompanhamento4" placeholder="Ex.: Macarrão" class="item-cardapio">
+                </div>
+                
                 <span>Proteína</span>
-                <input type="text" required>
-                <input type="submit" value="Inserir Cardápio">
+                <div class="linha-form-inserir-cardapio">
+                    <input type="text" name="mistura" placeholder="Opção 1">
+                </div>
+
+                <span>Sobremesa</span>
+                <div class="linha-form-inserir-cardapio">
+                    <input type="text" name="sobremesa" placeholder="Opção 1">
+                </div>
+                
+                <input type="submit" value="Inserir Cardápio" class="btn btn-inserir-cardapio">
             </form>
-            <a href="#">Voltar ao menu dos cardápios</a>
-            <a href="logout.php">Sair</a>
+            
+            <div class="btn-voltar-sair">
+                <a href="#">Voltar</a>
+                <a href="logout.php">Sair</a>
+            </div>
         </div>
     </section>
 </body>

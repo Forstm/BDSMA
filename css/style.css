@@ -4,7 +4,7 @@
 
 * Padronizar a classe .box-form e setar manualmente o tamanho em cada página
 
-*
+* Alterar px para rem
 
 */
 
@@ -21,7 +21,7 @@
     --fonte-texto: Playfair, 'sans-serif';
 }
 
-
+/* ESTILO PADRÃO */
 
 body{
     background: url(../images/background-img.png);
@@ -40,18 +40,35 @@ section{
 span{
     font-family: var(--fonte-texto);
     display: block;
+    margin: 19px 0 0;
+    font-size: 17px;
 }
 
 p{
     font-family: var(--fonte-texto);
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+    font-size: 17px;
 }
 
 h1{
     font-family: var(--fonte-titulo);
+    margin: 50px 0 30px;
+    text-align: center;
+    font-size: 30px;
 }
 
 input{
     display: block;
+    border: none;
+    outline: none;
+    padding: 4px 0;
+    background-color: transparent;
+}
+
+input::placeholder{
+    color: rgb(255, 230, 0);
 }
 
 input, span, h1, a{
@@ -62,18 +79,11 @@ a{
     color: rgb(255, 230, 0);
     text-decoration: none;
     font-weight: bold;
+    font-family: var(--fonte-texto);
+    font-size: 1.1rem;
 }
 
-.linha-form{
-    border-bottom: 1px solid white;
-}
-
-
-/*ESTILO PÁGINA LOGIN.HTML */
-
-section .box-form{
-    width: 25rem;
-    height: 26.5rem;
+.box-form{
     background-color: transparent;
     border: 1px solid #FFFFFF;
     backdrop-filter: blur(15px);
@@ -81,18 +91,37 @@ section .box-form{
     padding: 0px 50px;
 }
 
-.box-form h1{
-    margin: 50px 0 40px;
-    text-align: center;
-    font-size: 30px;
-    color: white;
+.linha-form{
+    border-bottom: 1px solid white;
 }
 
-.box-form p{
-    text-align: center;
-    margin-bottom: 30px;
-    color: white;
-    font-size: 17px;
+.btn{
+    margin: 30px auto 0;
+    padding: 4px 16px;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.btn-entrar:hover, .btn-inserir:hover, .btn-inserir-cardapio:hover{
+    background-color: #3b3b3b;
+}
+
+.btn-voltar-sair{
+    display: flex;
+    /* justify-content: space-around; */
+    /* justify-content: space-evenly; */
+    justify-content: space-between;
+    margin:30px 0 50px;
+}
+
+/* FIM ESTILO PADRÃO */
+/*
+/*
+/* ESTILO PÁGINA LOGIN.HTML */
+
+section .login{
+    width: 25rem;
 }
 
 .campos-form{
@@ -101,16 +130,8 @@ section .box-form{
     color: white;
 }
 
-.campos-form span{
-    margin: 19px 0 0;
-    font-size: 17px;
-}
-
 .campos-form input{
-    background-color: transparent;
-    border: none;
-    outline: none; /*Deixa sem borda mesmo quando clicado o campo */
-    color: white;
+    width: 100%;
 }
 
 .input-user-senha{
@@ -118,98 +139,38 @@ section .box-form{
     padding: 4px 0;
 }
 
-.input-user-senha::placeholder{
-    color: #e48b8b;
-}
-
 .campos-form .btn-entrar{
-    margin: 30px auto 0;
-    padding: 4px 16px;
-    cursor: pointer;
-    border: 1px solid #FFFFFF;
-    border-radius: 5px;
-}
-
-.campos-form .btn-entrar:hover{
-    background-color: #3b3b3b;
+    width: 30%;
+    margin-bottom: 50px;
 }
 
 /* FIM ESTILO PÁGINA LOGIN.HTML */
 /*
 /*
-/*ESTILO PÁGINA INSERIR.HTML */
-
-.box-inserir{
-    width: 400px;
-    height: 430px;
-    background-color: white;
-    border-radius: 1rem;
-    background-color: transparent;
-    border: 1px solid #FFFFFF;
-    backdrop-filter: blur(15px);
-}
-
-.box-inserir h1{
-    margin: 50px 0 30px;
-    text-align: center;
-    font-size: 30px;
-    color: white;
-}
+/* ESTILO PÁGINA INSERIR.HTML */
 
 .campos-form-inserir{
     width: 250px;
     margin: 0 auto;
 }
 
-.campos-form-inserir span{
-    color: white;
-    margin: 16px 0 3px;
-}
-
 .campos-form-inserir input{
     width: 100%;
-    border: none;
-    outline: none;
-    padding: 4px 0;
-    background-color: transparent;
-    color: white;
-}
-
-.input-inserir::placeholder{
-    color: #e48b8b;
 }
 
 .campos-form-inserir select{
     width: 100%;
-    margin: 3px 0 16px;
+    margin: 3px 0 0;
     border: 1px solid black;
     border-radius: 5px;
     padding: 4px;
-    
 }
 
 .campos-form-inserir .btn-inserir{
     width: 30%;
-    margin: 10px auto 0;
-    padding: 4px 16px;
-    cursor: pointer;
-    border: 1px solid white;
-    border-radius: 5px;
 }
 
-.campos-form-inserir .btn-inserir:hover{
-    background-color: #3b3b3b;
-}
-
-.texto-sair{
-    margin: 30px 0 0;
-    display: block;
-    text-align: center;
-    font-size: 18px;
-    color: white;
-}
-
-/*FIM ESTILO PÁGINA INSERIR.HTML */
+/* FIM ESTILO PÁGINA INSERIR.HTML */
 /*
 /*
 /* ESTILO PÁGINA CONSULTA.HTML */
@@ -236,16 +197,20 @@ table, th, td {
 }
 
 th, td {
-    padding: 10px;
+    padding: 10px 0;
     text-align: center;
 }
 
 td{
     background-color: #f2f2f2;
+    font-family: var(--fonte-texto);
+    font-size: 1rem;
 }
 
 th {
     background-color: #a2a2a2;
+    font-family: var(--fonte-texto);
+    font-size: 1.2rem;
 }
 
 /* FIM ESTILO PÁGINA CONSULTA.HTML */
@@ -253,6 +218,23 @@ th {
 /*
 /* ESTILO PÁGINA INSERIR_CARDAPIO.HTML */
 
+.item-cardapio{
+    display: inline;
+    width: 120px;
+    /* background-color: blue; */
+}
 
+.linha-form-inserir-cardapio{
+    border-bottom: 1px solid white;
+    display: inline-block;
+    width: 115px;
+    margin: 0 10px 0 0;
+}
+
+.acompanhamento-fixo{
+    margin: 0;
+    text-align: left;
+    padding: 3px 0;
+}
 
 /* FIM ESTILO PÁGINA INSERIR_CARDAPIO.HTML */

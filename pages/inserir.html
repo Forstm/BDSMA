@@ -9,7 +9,7 @@
 </head>
 <body>
     <section>
-        <div class="box-inserir">
+        <div class="box-form inserir">
             <h1>Pedido de opção</h1>
             <form action="../api/inserir.php" method="POST">
                 <div class="campos-form-inserir">
@@ -28,12 +28,14 @@
                         <option value="Omelete">Omelete</option>
                         <option value="Frango grelhado">Frango grelhado</option>
                     </select>
-                    <input type="submit" value="Inserir" class="btn-inserir">
+                    <input type="submit" value="Inserir" class="btn btn-inserir">
                 </div>
             </form>
-            <span class="texto-sair">
-                Caso deseje sair, clique <a href="logout.php">aqui</a>
-            </span>
+
+            <div class="btn-voltar-sair">
+                <a href="#">Voltar</a>
+                <a href="logout.php">Sair</a>
+            </div>
         </div>
     </section>
 </body>
